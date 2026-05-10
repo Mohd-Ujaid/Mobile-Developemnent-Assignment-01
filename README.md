@@ -1,56 +1,65 @@
-# Welcome to your Expo app 👋
+# Chai Aur Code Mobile Developement Assignment 01
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+This is a simple authentication pages using Expo. The goal is to implement a functional and user-friendly login and signup interface with styling.
 
-## Get started
+## Project Video Preview
 
-1. Install dependencies
+<video src="./assets/video/preview.mp4" controls autoplay muted loop></video>
 
-   ```bash
-   npm install
-   ```
+## Project Screenshorts
 
-2. Start the app
+### Extra Screen
 
-   ```bash
-   npx expo start
-   ```
+![Extra screen](./assets/video/e.jpg)
 
-In the output, you'll find options to open the app in a
+<hr/>
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+### Sign In
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+![sign in page](./assets/video/signin.jpg)
 
-## Get a fresh project
+<hr/>
 
-When you're ready, run:
+### Sign Up
+
+![sign up page](./assets/video/signup.jpg)
+
+<hr/>
+
+### Forgot Password
+
+![forgot password page](./assets/video/forgot.jpg)
+
+## Prerequisites
+
+- Node.js downloaded and installed in your system.
+- Must have any smart phone(iOS or Android)
+- Expo Go app downloaded from play store or app store.
+
+## How to Run the Project
+
+### 1. Clone the Repository .
+
+To get a copy of this project on your local machine to run the following commands:
 
 ```bash
-npm run reset-project
+git clone https://github.com/Mohd-Ujaid/Mobile-Developemnent-Assignment-01.git
 ```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+### 2. Install dependencies
 
-### Other setup steps
+```
+cd Mobile-Developemnent-Assignment-01
+npm install
+```
 
-- To set up ESLint for linting, run `npx expo lint`, or follow our guide on ["Using ESLint and Prettier"](https://docs.expo.dev/guides/using-eslint/)
-- If you'd like to set up unit testing, follow our guide on ["Unit Testing with Jest"](https://docs.expo.dev/develop/unit-testing/)
-- Learn more about the TypeScript setup in this template in our guide on ["Using TypeScript"](https://docs.expo.dev/guides/typescript/)
+### 3. Start the development server
 
-## Learn more
+```
+npx expo start
+```
 
-To learn more about developing your project with Expo, look at the following resources:
+### 4. Run on your device
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
-
-## Join the community
-
-Join our community of developers creating universal apps.
-
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+- Download the Expo Go app on your device (Android or iOS).
+- Scan the QR code appearing in your terminal.
