@@ -1,12 +1,12 @@
-# Chai Aur Code Mobile Developement Assignment 01
+# Chai Aur Code Mobile Development Assignment 01
 
-This is a simple authentication pages using Expo. The goal is to implement a functional and user-friendly login and signup interface with styling.
+This is a simple authentication page using Expo. The goal is to implement a functional and user-friendly login and signup interface with styling.
 
 ## Project Video Preview
 
-<video src="./assets/video/preview.mp4" controls autoplay muted loop></video>
+![Project prview](./assets/video/preview.gif)
 
-## Project Screenshorts
+## Project Screenshots
 
 ### Extra Screen
 
@@ -32,15 +32,15 @@ This is a simple authentication pages using Expo. The goal is to implement a fun
 
 ## Prerequisites
 
-- Node.js downloaded and installed in your system.
+- Node.js has been downloaded and installed on your system.
 - Must have any smart phone(iOS or Android)
-- Expo Go app downloaded from play store or app store.
+- Expo Go app downloaded from the Play Store or App Store.
 
 ## How to Run the Project
 
-### 1. Clone the Repository .
+### 1. Clone the Repository.
 
-To get a copy of this project on your local machine to run the following commands:
+To get a copy of this project on your local machine, run the following commands:
 
 ```bash
 git clone https://github.com/Mohd-Ujaid/Mobile-Developemnent-Assignment-01.git
