@@ -1,98 +1,118 @@
-import * as Device from 'expo-device';
-import { Platform, StyleSheet } from 'react-native';
-import { SafeAreaView } from 'react-native-safe-area-context';
+import { Pressable, StatusBar, StyleSheet, Text, View,Image } from "react-native";
+import {SafeAreaView} from 'react-native-safe-area-context';
+import {Link} from 'expo-router';
 
-import { AnimatedIcon } from '@/components/animated-icon';
-import { HintRow } from '@/components/hint-row';
-import { ThemedText } from '@/components/themed-text';
-import { ThemedView } from '@/components/themed-view';
-import { WebBadge } from '@/components/web-badge';
-import { BottomTabInset, MaxContentWidth, Spacing } from '@/constants/theme';
-
-function getDevMenuHint() {
-  if (Platform.OS === 'web') {
-    return <ThemedText type="small">use browser devtools</ThemedText>;
-  }
-  if (Device.isDevice) {
-    return (
-      <ThemedText type="small">
-        shake device or press <ThemedText type="code">m</ThemedText> in terminal
-      </ThemedText>
-    );
-  }
-  const shortcut = Platform.OS === 'android' ? 'cmd+m (or ctrl+m)' : 'cmd+d';
+export default function Index() {
   return (
-    <ThemedText type="small">
-      press <ThemedText type="code">{shortcut}</ThemedText>
-    </ThemedText>
-  );
-}
+    <SafeAreaView style = {styles.screen}>
+      <StatusBar 
+      barStyle='dark-content'
+      />
+      <View style={styles.container}>
+        <Image
+        source = {require("../../assets/images/icon (2).png")}
+        style={styles.favicon}
+        />
+      <View style={styles.heading}>
+        <Text style={styles.title}>Chai Aur Code</Text>
+        
+      </View>
+      <Text style={styles.subtitle}>Mobile Development Cohort</Text>
+      <Text style={styles.subtitle}>Assignment 01</Text>
+      <Image
+      source={{uri:"https://chaicode.com/assets/mobile-dev-dark-Ctgs9R2R.webp"}}
+      style={styles.image}
+      />
 
-export default function HomeScreen() {
-  return (
-    <ThemedView style={styles.container}>
-      <SafeAreaView style={styles.safeArea}>
-        <ThemedView style={styles.heroSection}>
-          <AnimatedIcon />
-          <ThemedText type="title" style={styles.title}>
-            Welcome to&nbsp;Expo
-          </ThemedText>
-        </ThemedView>
+      
 
-        <ThemedText type="code" style={styles.code}>
-          get started
-        </ThemedText>
+      <Pressable style={styles.button}>
+        <Text style={styles.buttonText}>
+          
+        <Link href="/pages/signin">
+        Sign In
+      </Link>
+        </Text>
 
-        <ThemedView type="backgroundElement" style={styles.stepContainer}>
-          <HintRow
-            title="Try editing"
-            hint={<ThemedText type="code">src/app/index.tsx</ThemedText>}
-          />
-          <HintRow title="Dev tools" hint={getDevMenuHint()} />
-          <HintRow
-            title="Fresh start"
-            hint={<ThemedText type="code">npm run reset-project</ThemedText>}
-          />
-        </ThemedView>
+        
+        
+      </Pressable>
 
-        {Platform.OS === 'web' && <WebBadge />}
-      </SafeAreaView>
-    </ThemedView>
+      <Pressable style={styles.button}>
+        <Text style={styles.buttonText}>
+          
+        <Link href="/pages/signup">
+        Sign Up
+      </Link>
+        </Text>
+        
+      </Pressable>
+
+      <Pressable style={styles.button}>
+        <Text style={styles.buttonText}>
+          
+        <Link href="/pages/forgot-password">
+        Forgot Password
+      </Link>
+        </Text>
+        
+      </Pressable>
+
+      
+    </View>
+    </SafeAreaView>
   );
 }
 
 const styles = StyleSheet.create({
+  screen :{
+    flex: 1,
+    backgroundColor: 'white',
+    paddingHorizontal: 20,
+  },
   container: {
     flex: 1,
+    alignItems: 'center',
     justifyContent: 'center',
+    backgroundColor: 'white',
+  },
+  heading:{
     flexDirection: 'row',
-  },
-  safeArea: {
-    flex: 1,
-    paddingHorizontal: Spacing.four,
-    alignItems: 'center',
-    gap: Spacing.three,
-    paddingBottom: BottomTabInset + Spacing.three,
-    maxWidth: MaxContentWidth,
-  },
-  heroSection: {
     alignItems: 'center',
     justifyContent: 'center',
-    flex: 1,
-    paddingHorizontal: Spacing.four,
-    gap: Spacing.four,
+  },
+  favicon :{
+    width: 100,
+    height: 100,
+    resizeMode: 'contain',
+    marginBottom: 20,
+    
+  },
+  image: {
+    width: 350,
+    height: 250,
+    resizeMode: 'contain',
   },
   title: {
-    textAlign: 'center',
+    fontSize: 35,
+    fontWeight: '700',
+    paddingVertical: 3,
   },
-  code: {
-    textTransform: 'uppercase',
+  subtitle: {
+    marginTop: 8,
+    color: '#777',
+    fontSize: 20,
+    paddingVertical: 3,
   },
-  stepContainer: {
-    gap: Spacing.three,
-    alignSelf: 'stretch',
-    paddingHorizontal: Spacing.three,
-    paddingVertical: Spacing.four,
-    borderRadius: Spacing.four,
+  button: {
+    marginTop: 30,
+    backgroundColor: '#7ED321',
+    paddingVertical: 14,
+    paddingHorizontal: 25,
+    borderRadius: 17,
+  },
+  buttonText: {
+    color: '#fff',
+    fontWeight: '600',
   },
 });
